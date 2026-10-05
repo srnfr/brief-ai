@@ -20,7 +20,7 @@ Selon le volume du périmètre, l’enclave s’appuie sur des capacités NVIDIA
 
 Les interactions éventuellement nécessaires avec Internet, par exemple pour consulter une documentation technique ou télécharger un outil spécifique, passent par un sas de sécurité et d’inspection dédié. Les destinations autorisées relèvent d’une liste blanche stricte et particulièrement surveillée. Tous les échanges qui traversent ce sas sont journalisés. Ce contrôle des flux sortants vise à prévenir toute transmission non autorisée de code, de données ou de propriété intellectuelle hors de l’enclave.
 
-## Une analyse qui suit les relations dans le code
+## Une plateforme d’IA spécialement entraînée pour l’analyse de code logiciel
 
 Les vulnérabilités se révèlent souvent dans les relations entre composants plutôt que dans une instruction isolée. L’analyse examine donc les flux de données, les contrôles d’accès, les secrets, les dépendances et les hypothèses de configuration qui peuvent former un chemin d’attaque plausible.
 
@@ -30,7 +30,7 @@ Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l�
 
 Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (*open weight*), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée.
 
-Tous nos rapports d’audit et travaux de recherche sont anonymisés, puis conservés dans un espace de stockage raw dédié et indexés dans une base de connaissances de type RAG (*Retrieval-Augmented Generation*). Cette base est mise à la disposition du LLM à l’intérieur de l’enclave. Pendant l’investigation, le modèle retrouve les analyses, scénarios de risque et pistes de correction pertinents issus de cette expérience accumulée. Le fine-tuning adapte ses capacités ; le RAG lui apporte des connaissances consultables au moment de l’audit, ce qui renforce la portée du moteur d’audit cyber. Les résultats produits par les agents sont ensuite rapprochés, contextualisés et structurés pour former une vue cohérente des risques.
+Tous nos rapports d’audit et travaux de recherche sont anonymisés, puis conservés dans un espace de stockage raw dédié et indexés dans une base de connaissances de type RAG (*Retrieval-Augmented Generation*). Cette base est mise à la disposition du LLM à l’intérieur de l’enclave. Pendant l’investigation, le modèle retrouve les analyses, scénarios de risque et pistes de correction pertinents issus de cette expérience accumulée. Le fine-tuning adapte ses capacités ; le RAG lui apporte des connaissances consultables au moment de l’audit, ce qui renforce la portée du moteur d’audit cyber. Nos équipes d’experts rapprochent, contextualisent et structurent ensuite les résultats produits par les agents pour former une vue cohérente des risques.
 
 ## Déroulé de l’audit
 
