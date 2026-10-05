@@ -75,4 +75,4 @@ BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtris
 
 ---
 
-Version 1.0 · Contact : [contact@blutrusty.com](mailto:contact@blutrusty.com)
+Version 1.0 · Contact : [contact@bluetrusty.com](mailto:contact@bluetrusty.com)

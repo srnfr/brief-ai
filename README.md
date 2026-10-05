@@ -1,15 +1,20 @@
-# brief-ai
+# Audit de code par IA en environnement maîtrisé
 
-Brochure client statique pour présenter une offre d'IA d'entreprise : modèles locaux, RAG, agents métier et connecteurs gouvernés.
+Ce dépôt contient les supports de présentation de l’offre BlueTrusty d’audit de cybersécurité de code logiciel.
 
-## Consulter la brochure
+- `audit-code-maitrise.md` : texte détaillé de l’offre et références.
+- `fiche-audit-code.pdf` : fiche client d’une page A4.
+- `fiche-audit-code.html` : source modifiable de la fiche PDF.
+- `index.html` et `styles.css` : brochure consultable dans un navigateur.
 
-Ouvrir simplement `index.html` dans un navigateur. Le document est conçu pour une lecture écran et l'impression A4 (`Ctrl/Cmd + P`).
+La fiche reprend l’identité graphique de la page de garde du dépôt `srnfr/scan-hl-sept26` : fond bleu nuit, ondes géométriques, accent cyan et logo BlueTrusty blanc sans signature. Le logo importé se trouve dans `assets/bluetrusty-logo-white.png`.
 
-## Contenu
+Pour régénérer le PDF avec Chromium depuis la racine du dépôt :
 
-Le contenu s'appuie sur les axes d'offre publiés par BlueTrusty : IA locale ou cloud privé, assistants sur données internes, RAG, agents métier et MCP. Les éléments de contact pointent vers [bluetrusty.ai](https://bluetrusty.ai/).
+```sh
+chromium --headless --no-sandbox --no-pdf-header-footer \
+  --print-to-pdf="$PWD/fiche-audit-code.pdf" \
+  "file://$PWD/fiche-audit-code.html"
+```
 
-## Publication
-
-Le projet ne nécessite ni compilation ni dépendance. Il peut être publié tel quel sur GitHub Pages ou tout hébergement de fichiers statiques.
+La fiche condense le texte du Markdown pour tenir sur une seule page ; le Markdown reste la version détaillée à relire pour toute évolution de l’offre.

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlueTrusty — Audit de cybersécurité de code logiciel par IA</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { width: 210mm; height: 297mm; margin: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #f7fbff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; padding: 14mm 15mm 10mm; background: linear-gradient(135deg, #102e60 0%, #07182f 53%, #01040d 100%); }
+    .art { position: absolute; inset: 0; width: 210mm; height: 297mm; opacity: .72; pointer-events: none; }
+    .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; }
+    .topline { display: flex; justify-content: space-between; align-items: flex-start; min-height: 24mm; }
+    .logo { width: 52mm; height: 23mm; object-fit: contain; object-position: left top; }
+    .edition { padding-top: 2mm; color: #a9c8dd; font-size: 7.1pt; letter-spacing: .17em; text-align: right; text-transform: uppercase; line-height: 1.5; }
+    .hero { padding-top: 4mm; padding-bottom: 7mm; }
+    .eyebrow, .label, .mini-label { color: #6fd5f4; font-size: 7.2pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 4mm; }
+    h1 { max-width: 174mm; margin: 0; font-size: 24pt; line-height: 1.14; letter-spacing: -.035em; font-weight: 700; }
+    h1 span { color: #7fd6f0; }
+    .intro { max-width: 156mm; margin: 4mm 0 0; color: #d6e4ee; font-size: 9pt; line-height: 1.42; }
+    .rule { width: 30mm; height: 1.5mm; margin: 0 0 6mm; background: #45c9f4; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 7mm; }
+    .block { padding: 0 0 5mm; border-bottom: 1px solid rgba(145, 198, 227, .28); }
+    .block h2, .wide h2 { margin: 2mm 0 2mm; font-size: 12pt; line-height: 1.18; letter-spacing: -.015em; }
+    .block p, .wide p, .deliver p { margin: 0; color: #d6e4ee; font-size: 8.15pt; line-height: 1.42; }
+    .wide { margin-top: 6mm; padding: 4.2mm 5mm 4.5mm; border: 1px solid rgba(111, 213, 244, .33); background: rgba(6, 26, 54, .70); }
+    .wide h2 { margin-top: 1.5mm; }
+    .wide p { max-width: 170mm; }
+    .three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4.5mm; margin-top: 4mm; }
+    .three div { border-top: 1px solid rgba(111, 213, 244, .44); padding-top: 2mm; }
+    .three strong { color: #9ce2f3; display: block; margin-bottom: 1mm; font-size: 8pt; }
+    .three span { display: block; color: #ccdeea; font-size: 7.6pt; line-height: 1.32; }
+    .lower { display: grid; grid-template-columns: 1.02fr .98fr; gap: 7mm; margin-top: 6mm; }
+    .lower h2 { margin: 2mm 0 2.5mm; font-size: 12pt; }
+    .steps { margin: 0; padding: 0; list-style: none; }
+    .steps li { display: grid; grid-template-columns: 8mm 1fr; gap: 1mm; margin: 0 0 2.3mm; font-size: 8pt; line-height: 1.29; }
+    .steps b { color: #6fd5f4; font-size: 7.5pt; }
+    .steps strong { color: white; }
+    .deliver p + p { margin-top: 3mm; }
+    .bottom { margin-top: auto; }
+    .sources { padding-top: 3.5mm; border-top: 1px solid rgba(145, 198, 227, .35); color: #c3d9e8; font-size: 7.3pt; line-height: 1.5; }
+    .sources a { color: #9ce2f3; text-decoration: underline; text-underline-offset: 1px; }
+    .sources p { margin: 0 0 1.2mm; }
+    .footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 3mm; margin-top: 4mm; padding-top: 2.6mm; border-top: 1px solid rgba(145, 198, 227, .35); color: #d9e8f0; font-size: 7.1pt; }
+    .footer a { color: #a7e0f1; }
+    .footer .cert { color: #a7e0f1; }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <svg class="art" viewBox="0 0 840 1188" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <path id="wave" d="M 380,-65 C 1020,45 410,330 785,510 S 1130,1130 520,1265" fill="none" stroke="#58acd3" stroke-width=".75"/>
+        <path id="wave2" d="M -120,1170 C 150,760 390,1330 890,990" fill="none" stroke="#3c87c0" stroke-width=".7"/>
+      </defs>
+      <g opacity=".35">
+        <use href="#wave"/><use href="#wave" transform="translate(10 0)"/><use href="#wave" transform="translate(20 0)"/><use href="#wave" transform="translate(30 0)"/><use href="#wave" transform="translate(40 0)"/><use href="#wave" transform="translate(50 0)"/><use href="#wave" transform="translate(60 0)"/><use href="#wave" transform="translate(70 0)"/><use href="#wave" transform="translate(80 0)"/><use href="#wave" transform="translate(90 0)"/>
+        <use href="#wave2"/><use href="#wave2" transform="translate(20 -8)"/><use href="#wave2" transform="translate(40 -16)"/><use href="#wave2" transform="translate(60 -24)"/><use href="#wave2" transform="translate(80 -32)"/>
+      </g>
+      <g fill="none" stroke="#84caef" stroke-width=".7" opacity=".18">
+        <circle cx="760" cy="945" r="230"/><circle cx="742" cy="955" r="161"/><circle cx="724" cy="965" r="113"/><circle cx="706" cy="975" r="79"/><circle cx="688" cy="985" r="55"/>
+      </g>
+    </svg>
+    <div class="content">
+      <div class="topline">
+        <img class="logo" src="assets/bluetrusty-logo-white.png" alt="BlueTrusty">
+        <div class="edition">Fiche service<br>Version 1.0 · 2026</div>
+      </div>
+
+      <header class="hero">
+        <p class="eyebrow">Cybersécurité · Audit de code assisté par IA</p>
+        <h1>Audit de cybersécurité de code logiciel par IA <span>dans un environnement maîtrisé</span></h1>
+        <p class="intro">Une investigation approfondie pour les organisations qui ne peuvent exposer leur code à des services externes, y compris à des outils d’IA en cloud configurés en ZDR.</p>
+      </header>
+
+      <div class="rule"></div>
+
+      <div class="grid">
+        <section class="block">
+          <div class="label">01 / Un périmètre confidentiel</div>
+          <h2>Le code reste dans l’enclave</h2>
+          <p>L’audit protège la confidentialité et la propriété intellectuelle du client. Aucun extrait de code n’est transmis à une IA ou à un autre service extérieur à l’enclave. Le périmètre et les modalités d’échange sont validés avant l’intervention.</p>
+        </section>
+        <section class="block">
+          <div class="label">02 / Une capacité dédiée</div>
+          <h2>Enclave européenne maîtrisée</h2>
+          <p>BlueTrusty exploite ses équipements NVIDIA ou réserve des capacités brutes en IaaS, notamment Blackwell ou DGX. L’opérateur est qualifié SecNumCloud ou héberge les ressources dans l’UE. Le choix est validé par le client avant l’audit.</p>
+        </section>
+      </div>
+
+      <section class="wide">
+        <div class="label">03 / Une plateforme d’IA spécialisée</div>
+        <h2>Des agents parallèles, une mémoire d’audit commune</h2>
+        <p>Un harnais open source indépendant de l’éditeur du LLM orchestre plusieurs agents sur de grandes bases de code. Le modèle MoE à poids ouverts est fine-tuné sur nos audits anonymisés. Tous nos rapports et recherches anonymisés alimentent aussi une base RAG consultée par le modèle au sein de l’enclave.</p>
+        <div class="three">
+          <div><strong>Explorer</strong><span>Architecture, dépendances, droits et flux sensibles.</span></div>
+          <div><strong>Contrôler</strong><span>Internet via un sas d’inspection, liste blanche stricte et échanges journalisés.</span></div>
+          <div><strong>Qualifier</strong><span>Conclusions rapprochées et supervisées par nos experts.</span></div>
+        </div>
+      </section>
+
+      <div class="lower">
+        <section>
+          <div class="label">04 / Déroulement</div>
+          <h2>Un audit piloté par nos équipes</h2>
+          <ol class="steps">
+            <li><b>01</b><span><strong>Cadrage</strong> du périmètre et des menaces.</span></li>
+            <li><b>02</b><span><strong>Cartographie et planification</strong> des investigations.</span></li>
+            <li><b>03</b><span><strong>Recherche</strong> des faiblesses et chemins d’attaque.</span></li>
+            <li><b>04</b><span><strong>Qualification</strong> des constats et des priorités.</span></li>
+            <li><b>05</b><span><strong>Restitution</strong> et échanges avec le client.</span></li>
+          </ol>
+        </section>
+        <section class="deliver">
+          <div class="label">05 / Livrable</div>
+          <h2>Un rapport orienté correction</h2>
+          <p>Nos experts construisent puis démantèlent l’environnement de test, conduisent les entretiens et supervisent l’analyse. Le rapport présente des constats argumentés, une synthèse priorisée et des annexes techniques comprenant des propositions de correction de code.</p>
+          <p>L’audit s’appuie sur les référentiels NIST, MITRE et OWASP. Il ne garantit pas l’absence de toute vulnérabilité.</p>
+        </section>
+      </div>
+
+      <div class="bottom">
+        <div class="sources">
+          <p>Référentiels : <a href="https://csrc.nist.gov/pubs/sp/800/115/final">NIST SP 800-115</a> · <a href="https://cwe.mitre.org/">MITRE CWE</a> · <a href="https://owasp.org/projects/code-review-guide">OWASP Code Review Guide</a></p>
+          <p>Pour aller plus loin : <a href="https://www.orsys.fr/formation/ahi">formation ORSYS</a> · <a href="https://www.institut.capgemini.fr/formation/construire-sa-plateforme-ia-d-entreprise-souveraine-et-maitrisee/">formation Institut Capgemini</a> · <a href="https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132">article ChannelNews</a></p>
+        </div>
+        <footer class="footer">
+          <span class="cert">BlueTrusty · Certifié ISO 27001</span>
+          <a href="mailto:contact@bluetrusty.com">contact@bluetrusty.com</a>
+          <a href="https://bluetrusty.ai/">bluetrusty.ai</a>
+        </footer>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
