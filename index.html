@@ -3,113 +3,128 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Brochure client — IA locale, agents métier et RAG souverain." />
-    <title>BlueTrusty — IA locale, utile et maîtrisée</title>
+    <meta name="description" content="Brochure — Audit de code maîtrisé, par BlueTrusty." />
+    <title>BlueTrusty — Audit de code maîtrisé</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .training-links { display:grid; grid-template-columns:auto 1fr; gap:9px 18px; max-width:630px; margin-top:32px; padding-top:15px; border-top:1px solid rgba(255,255,255,.24); font:400 11px/1.35 "DM Mono",monospace; letter-spacing:.035em; }
+      .training-links span { grid-row:span 3; color:#b9e4d0; font-size:9px; letter-spacing:.1em; }
+      .training-links a { color:#d5e2e6; text-decoration:none; }.training-links b { color:#b9e4d0; font-size:15px; }
+      @media (max-width:760px) { .training-links { grid-template-columns:1fr; margin-top:25px; }.training-links span { grid-row:auto; } }
+    </style>
   </head>
   <body>
     <main class="brochure">
-      <section class="hero page">
-        <nav aria-label="Navigation principale">
-          <a class="brand" href="#accueil" aria-label="BlueTrusty, accueil">
-            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>BLUE<span>TRUSTY</span></span>
-          </a>
-          <span class="eyebrow">BROCHURE · 2026</span>
+      <section class="cover page" id="accueil">
+        <nav>
+          <a class="brand" href="#accueil" aria-label="BlueTrusty, accueil"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BLUE<span>TRUSTY</span></span></a>
+          <span class="eyebrow">OFFRE CYBERSÉCURITÉ · 2026</span>
         </nav>
-
-        <div class="hero-content" id="accueil">
-          <p class="kicker">IA D'ENTREPRISE · PRIVÉE · SOURCÉE</p>
-          <h1>Votre IA.<br /><em>Vos données.</em><br />Vos règles.</h1>
-          <p class="lede">Des assistants et agents IA réellement utiles, déployés dans votre périmètre de confiance.</p>
-          <a class="button" href="#contact">Échanger sur votre projet <span>→</span></a>
+        <div class="cover-art" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="cover-content">
+          <p class="kicker">AUDIT DE CODE ASSISTÉ PAR IA</p>
+          <h1>Votre code.<br /><em>Notre enclave.</em><br />Vos preuves.</h1>
+          <p class="lede">Une analyse de sécurité approfondie de vos logiciels, menée dans un environnement cloisonné et conçue pour produire des conclusions actionnables.</p>
+          <a class="button" href="#contact">Parler de votre périmètre <span>→</span></a>
         </div>
+        <div class="cover-footer"><span>CODE SOURCE · DÉPENDANCES · CONFIGURATIONS</span><span>CONFIDENTIEL · TRAÇABLE · RESTITUÉ EN MAIN PROPRE</span></div>
+      </section>
 
-        <div class="hero-footer">
-          <p>LLM local · RAG · Agents métier · MCP</p>
-          <p>ON-PREM OU CLOUD PRIVÉ</p>
+      <section class="challenge page page-light">
+        <div class="section-label"><span>01</span> Le défi</div>
+        <div class="offset-copy">
+          <p class="kicker">VOIR PLUS LOIN, SANS EXPOSER DAVANTAGE</p>
+          <h2>Un code sensible mérite<br />une lecture <em>hors norme.</em></h2>
+          <p>Les vulnérabilités sérieuses ne se trouvent pas uniquement dans une ligne isolée. Elles émergent des flux de données, des droits, des dépendances et des hypothèses d’architecture. Notre service explore ces interactions à grande échelle, tout en maintenant votre propriété intellectuelle dans un périmètre contrôlé.</p>
+        </div>
+        <div class="commitments">
+          <article><strong>01</strong><h3>Confidentialité</h3><p>Le code remis est traité dans une enclave dédiée et cloisonnée.</p></article>
+          <article><strong>02</strong><h3>Profondeur</h3><p>Le raisonnement relie code, configurations, dépendances et documentation.</p></article>
+          <article><strong>03</strong><h3>Décision</h3><p>Chaque constat est hiérarchisé pour accélérer vos arbitrages de correction.</p></article>
         </div>
       </section>
 
-      <section class="statement page page-light">
-        <div class="section-label"><span>01</span> L'enjeu</div>
-        <div class="statement-copy">
-          <p class="kicker">L'IA, SANS COMPROMIS</p>
-          <h2>Vos équipes veulent utiliser l'IA.<br />Vos informations doivent <em>rester chez vous.</em></h2>
-          <p>Contrats, procédures, tickets, rapports, référentiels : votre connaissance est précieuse. Nous transformons ces ressources en un avantage opérationnel sans renoncer à la confidentialité, à la traçabilité ou à la maîtrise du budget.</p>
+      <section class="enclave page">
+        <div class="section-label"><span>02</span> L’enclave européenne</div>
+        <div class="offset-copy">
+          <p class="kicker">VOTRE CODE NE QUITTE PAS UN PÉRIMÈTRE DÉDIÉ</p>
+          <h2>Le code entre.<br />Le rapport <em>ressort.</em></h2>
         </div>
-        <div class="three-up" aria-label="Nos engagements">
-          <article><strong>01</strong><h3>Confidentielle</h3><p>Modèles, données et accès dans votre périmètre de confiance.</p></article>
-          <article><strong>02</strong><h3>Fiable</h3><p>Des réponses reliées à vos sources, avec citations et droits respectés.</p></article>
-          <article><strong>03</strong><h3>Prévisible</h3><p>Un coût, une architecture et des règles d'usage cadrés dès le départ.</p></article>
+        <div class="enclave-grid" aria-label="Parcours sécurisé de l'audit">
+          <div class="enclave-step"><b>01</b><h3>Remise contrôlée</h3><p>Le périmètre, les règles de manipulation et les interlocuteurs sont définis avant tout transfert.</p></div>
+          <div class="connector" aria-hidden="true">→</div>
+          <div class="enclave-step core"><b>02</b><h3>Enclave UE dédiée</h3><p>Le traitement a lieu en Union européenne, sur du matériel réservé à cette fonction — ni cloud, ni service mutualisé.</p></div>
+          <div class="connector" aria-hidden="true">→</div>
+          <div class="enclave-step"><b>03</b><h3>Restitution sécurisée</h3><p>Les conclusions sont partagées via le canal convenu, avec les éléments de preuve utiles.</p></div>
         </div>
+        <aside class="note">Cette architecture évite de confier votre code à des services IA commerciaux mutualisés et adapte le dispositif à vos contraintes de confidentialité.</aside>
       </section>
 
-      <section class="architecture page">
-        <div class="section-label"><span>02</span> La promesse</div>
-        <div class="architecture-head">
-          <p class="kicker">UNE IA QUI CONNAÎT VOTRE MÉTIER</p>
-          <h2>De la question<br />à une réponse <em>exploitable.</em></h2>
+      <section class="method page page-light">
+        <div class="section-label"><span>03</span> La méthode</div>
+        <div class="offset-copy method-heading">
+          <p class="kicker">UNE EXPLORATION STRUCTURÉE, PAS UNE BOÎTE NOIRE</p>
+          <h2>Cinq temps pour<br />transformer le code en <em>preuves.</em></h2>
         </div>
-        <div class="flow" aria-label="Parcours d'une demande auprès de l'agent IA">
-          <div class="flow-step"><b>01</b><span>Question métier</span><small>Une demande simple, dans le langage de vos équipes.</small></div>
-          <div class="flow-line" aria-hidden="true"></div>
-          <div class="flow-step"><b>02</b><span>Sources autorisées</span><small>Documents, CRM, SQL, tickets, SharePoint ou NAS.</small></div>
-          <div class="flow-line" aria-hidden="true"></div>
-          <div class="flow-step accent"><b>03</b><span>Agent privé</span><small>Recherche, raisonnement, orchestration et contrôle.</small></div>
-          <div class="flow-line" aria-hidden="true"></div>
-          <div class="flow-step"><b>04</b><span>Réponse sourcée</span><small>Une synthèse utile, avec les références qui l'étayent.</small></div>
-        </div>
-        <aside class="quote">« L'utilisateur pose une question métier. L'agent retrouve le bon contexte, mobilise le modèle adapté et restitue une réponse vérifiable. »</aside>
+        <ol class="method-list">
+          <li><span>01</span><div><h3>Cadrer</h3><p>Définir applications, branches, composants critiques, menaces et critères de restitution.</p></div></li>
+          <li><span>02</span><div><h3>Cartographier</h3><p>Comprendre l’architecture, les frontières de confiance, les secrets, les dépendances et les flux sensibles.</p></div></li>
+          <li><span>03</span><div><h3>Investiguer</h3><p>Explorer les chemins d’attaque plausibles et rechercher les faiblesses avec des analyses ciblées.</p></div></li>
+          <li><span>04</span><div><h3>Qualifier</h3><p>Relier chaque constat à son contexte, son impact potentiel, sa reproductibilité et sa priorité de correction.</p></div></li>
+          <li><span>05</span><div><h3>Restituer</h3><p>Livrer un rapport lisible par les décideurs et exploitable par les équipes de développement.</p></div></li>
+        </ol>
       </section>
 
-      <section class="offers page page-light">
-        <div class="section-label"><span>03</span> Nos offres</div>
-        <div class="offers-head">
-          <p class="kicker">UN PARCOURS CONCRET</p>
-          <h2>Du premier cas d'usage<br />au <em>socle IA durable.</em></h2>
+      <section class="engine page">
+        <div class="section-label"><span>04</span> L’analyse parallèle</div>
+        <div class="offset-copy">
+          <p class="kicker">PLUSIEURS AGENTS, UN MÊME NIVEAU D’EXIGENCE</p>
+          <h2>Lire de grandes codebases<br />sans perdre le <em>fil.</em></h2>
+          <p class="body-copy">Plusieurs agents spécialisés travaillent en parallèle sur les zones, flux et hypothèses les plus pertinentes. Cette approche distribue l’investigation sur de vastes périmètres de code tout en consolidant les résultats dans une vue cohérente des risques.</p>
         </div>
-        <div class="offer-list">
-          <article>
-            <span class="offer-no">01</span><div><h3>Cadrage IA locale</h3><p>Identifier le cas d'usage, les données utiles, les profils, l'hébergement et le budget cible.</p></div><span class="arrow">↗</span>
-          </article>
-          <article>
-            <span class="offer-no">02</span><div><h3>Assistant sur vos données</h3><p>Concevoir un assistant privé : prompts, connecteurs, base de connaissance, sources citées et validation humaine.</p></div><span class="arrow">↗</span>
-          </article>
-          <article>
-            <span class="offer-no">03</span><div><h3>Déploiement LLM & agents</h3><p>Choisir les modèles et l'infrastructure, orchestrer les outils métier et industrialiser l'exploitation.</p></div><span class="arrow">↗</span>
-          </article>
-          <article>
-            <span class="offer-no">04</span><div><h3>Acculturation & autonomie</h3><p>Donner aux équipes les repères, les pratiques et les tests pour exploiter leur IA dans la durée.</p></div><span class="arrow">↗</span>
-          </article>
+        <div class="engine-cards">
+          <article><span>RÉPARTIR</span><p>Les agents se concentrent simultanément sur les composants, dépendances et chemins à risque.</p></article>
+          <article><span>RAISONNER</span><p>Un modèle frontière de type MoE, adapté à nos retours d’audit et à une documentation cyber sélectionnée, relie les signaux.</p></article>
+          <article><span>CONSOLIDER</span><p>Les résultats sont rapprochés, qualifiés et ancrés dans des éléments techniques vérifiables.</p></article>
         </div>
+        <p class="disclaimer">Du matériel IA de dernière génération est exclusivement dédié à cette fonction. L’IA accélère et approfondit l’investigation dans un cadre d’audit explicite.</p>
       </section>
 
-      <section class="principles page">
-        <div class="section-label"><span>04</span> Les fondations</div>
-        <p class="kicker">TECHNIQUE, MAIS COMPRÉHENSIBLE</p>
-        <h2>Une stack choisie<br />pour votre <em>réalité.</em></h2>
-        <div class="principle-grid">
-          <article><span>LLM local</span><p>Le moteur de réponse, exécuté dans votre environnement lorsque la confidentialité l'exige.</p></article>
-          <article><span>RAG entreprise</span><p>La recherche sémantique pour retrouver les bons passages dans les bonnes sources.</p></article>
-          <article><span>Connecteurs MCP</span><p>Des liens gouvernés vers les outils qui font vivre votre activité.</p></article>
-          <article><span>Gouvernance</span><p>SSO, rôles, audit, secrets et validations conçus dès le départ.</p></article>
+      <section class="deliverable page page-light">
+        <div class="section-label"><span>05</span> Votre restitution</div>
+        <div class="offset-copy">
+          <p class="kicker">UN RAPPORT QUI FAIT AVANCER</p>
+          <h2>De la vulnérabilité<br />à la <em>prochaine action.</em></h2>
         </div>
-        <p class="technology">Dify · Open WebUI · vLLM · SGLang · Ollama · bases vectorielles · modèles open weight</p>
+        <div class="report-layout">
+          <div class="report-sheet">
+            <div class="sheet-top"><span>RAPPORT D’AUDIT</span><span>CONFIDENTIEL</span></div>
+            <h3>Constat<br /><em>priorisé</em></h3>
+            <div class="severity"><span>CRITICITÉ</span><b>ÉLEVÉE</b></div>
+            <p>Contexte, élément concerné, scénario de risque, impact, éléments de preuve et recommandation de remédiation.</p>
+          </div>
+          <div class="report-points">
+            <article><b>Pour les décideurs</b><p>Une synthèse des expositions et des priorités de traitement.</p></article>
+            <article><b>Pour les équipes techniques</b><p>Des constats contextualisés, directement exploitables dans le cycle de correction.</p></article>
+            <article><b>Pour la suite</b><p>Un échange de restitution pour clarifier, arbitrer et organiser les remédiations.</p></article>
+          </div>
+        </div>
       </section>
 
       <section class="contact page" id="contact">
         <div class="contact-inner">
-          <p class="kicker">COMMENÇONS PAR LE BON SUJET</p>
-          <h2>Quel serait votre<br /><em>premier cas d'usage ?</em></h2>
-          <p>En quelques échanges, définissons le scénario qui aura le plus de valeur pour vos équipes : données, sécurité, modèles, budget et démonstration utile.</p>
+          <p class="kicker">COMMENÇONS PAR LE PÉRIMÈTRE</p>
+          <h2>Quelle partie de votre code<br />mérite un regard <em>approfondi ?</em></h2>
+          <p>Application métier, API, composant exposé, produit en préparation ou héritage critique : échangeons sur le niveau de sensibilité, le périmètre et la restitution attendue.</p>
           <a class="button button-light" href="https://bluetrusty.ai/" target="_blank" rel="noreferrer">Parler à un expert <span>→</span></a>
+          <div class="training-links">
+            <span>POUR APPROFONDIR CE CADRE</span>
+            <a href="https://www.orsys.fr/formation/ahi" target="_blank" rel="noreferrer">Formation ORSYS <b>↗</b></a>
+            <a href="https://www.institut.capgemini.fr/formation/construire-sa-plateforme-ia-d-entreprise-souveraine-et-maitrisee/" target="_blank" rel="noreferrer">Formation Institut Capgemini · IA souveraine et maîtrisée <b>↗</b></a>
+            <a href="https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132" target="_blank" rel="noreferrer">Article ChannelNews · Les plateformes IA souveraines <b>↗</b></a>
+          </div>
         </div>
-        <footer>
-          <a class="brand brand-footer" href="#accueil"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BLUE<span>TRUSTY</span></span></a>
-          <span>IA LOCALE · AGENTS MÉTIER · RAG SOUVERAIN</span>
-          <a href="https://bluetrusty.ai/" target="_blank" rel="noreferrer">bluetrusty.ai</a>
-        </footer>
+        <footer><a class="brand" href="#accueil"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BLUE<span>TRUSTY</span></span></a><span>BLUETRUSTY · CERTIFIÉ ISO 27001</span><a href="https://bluetrusty.ai/" target="_blank" rel="noreferrer">bluetrusty.ai</a></footer>
       </section>
     </main>
   </body>
