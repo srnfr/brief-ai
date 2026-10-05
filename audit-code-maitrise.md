@@ -1,4 +1,4 @@
-# Audit cyber de code dans un environnement maîtrisé
+# Audit de cybersécurité de code logiciel par IA dans un environnement maîtrisé
 
 ## Objet de l’offre
 
@@ -10,15 +10,15 @@ Elle est particulièrement adaptée aux organisations qui ne souhaitent pas expo
 
 Ces préoccupations rejoignent la [controverse récente autour de travaux mathématiques non publiés et des conditions dans lesquelles OpenAI aurait pu en avoir connaissance](https://www.wired.com/story/openai-navier-stokes-math-discovery-academics/). Les faits sont contestés, mais cet épisode rappelle l’importance de maîtriser précisément où circulent le code, les échanges et les résultats de recherche.
 
-## Un environnement adapté aux codes sensibles
+## Un audit de code adapté au contexte sensible
 
-Le code source, les dépendances, les configurations et la documentation utile sont étudiés dans une enclave située en Union européenne. Le matériel IA mobilisé est réservé à cette fonction. L’analyse ne repose pas sur un service cloud mutualisé et ne nécessite pas de transmettre le code à une plateforme d’IA commerciale.
+Le code source, les dépendances, les configurations et la documentation utile sont étudiés dans une enclave située en Union européenne. Le matériel IA mobilisé est réservé à cette fonction. L’analyse ne repose pas sur un service d’IA cloud mutualisé. En aucun cas, une partie du code ne sera exfiltrée ni transmise à une IA ou à tout autre service extérieur à l’enclave.
 
-Le périmètre est défini avant le transfert. Les modalités de remise, les règles de manipulation et le canal de restitution sont convenus avec le client afin de s’aligner sur ses contraintes de confidentialité.
+Le périmètre de l’audit cyber de code est défini avant le transfert. Les modalités de remise, les règles de manipulation et le canal de restitution sont convenus avec le client afin de s’aligner sur ses contraintes de confidentialité.
 
-Selon le volume du périmètre, l’enclave s’appuie sur des capacités NVIDIA de dernière génération, notamment Blackwell, ou sur des châssis DGX. Ces ressources sont réservées pour la durée de l’audit et louées à l’heure. Elles apportent la puissance de calcul nécessaire sans transformer l’intervention en un service IA mutualisé.
+Selon le volume du périmètre, l’enclave s’appuie sur des capacités NVIDIA, notamment des puces Blackwell ou des châssis DGX. Elle peut utiliser du matériel déjà détenu par BlueTrusty et exploité dans un environnement cloisonné et maîtrisé. Elle peut aussi recourir à la location à l’heure de capacités matérielles brutes auprès d’opérateurs d’infrastructure en tant que service (IaaS), soit qualifiés SecNumCloud, soit hébergeant ces capacités dans l’Union européenne. Dans ce cas, les ressources sont réservées à l’audit et intégrées à l’enclave, sans recours à un service d’IA mutualisé. Le choix de l’infrastructure, de l’opérateur et des modalités d’exploitation est présenté au client et validé par lui avant tout audit.
 
-Les interactions éventuellement nécessaires avec Internet, par exemple pour consulter une documentation technique ou télécharger un outil spécifique, passent par un proxy dédié. Les destinations autorisées relèvent d’une liste blanche stricte et particulièrement surveillée. Ce contrôle des flux sortants vise à prévenir toute transmission non autorisée de code, de données ou de propriété intellectuelle hors de l’enclave.
+Les interactions éventuellement nécessaires avec Internet, par exemple pour consulter une documentation technique ou télécharger un outil spécifique, passent par un sas de sécurité et d’inspection dédié. Les destinations autorisées relèvent d’une liste blanche stricte et particulièrement surveillée. Tous les échanges qui traversent ce sas sont journalisés. Ce contrôle des flux sortants vise à prévenir toute transmission non autorisée de code, de données ou de propriété intellectuelle hors de l’enclave.
 
 ## Une analyse qui suit les relations dans le code
 
@@ -26,15 +26,21 @@ Les vulnérabilités se révèlent souvent dans les relations entre composants p
 
 Plusieurs agents spécialisés travaillent en parallèle sur les zones les plus pertinentes du périmètre. Cette organisation permet de traiter de grandes bases de code sans limiter l’investigation à quelques fichiers ou à une lecture séquentielle.
 
-Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE, fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée. Les éléments anonymisés sont conservés dans un espace de stockage raw dédié, afin d’améliorer progressivement les capacités du moteur d’audit cyber. Les résultats produits par les agents sont rapprochés, contextualisés et structurés pour former une vue cohérente des risques.
+Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l’éditeur du modèle de langage utilisé, ce qui permet de maîtriser séparément l’orchestration de l’analyse et le choix du modèle.
+
+Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (*open weight*), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée. Les éléments anonymisés sont conservés dans un espace de stockage raw dédié, afin d’améliorer progressivement les capacités du moteur d’audit cyber. Les résultats produits par les agents sont rapprochés, contextualisés et structurés pour former une vue cohérente des risques.
 
 ## Déroulé de l’audit
 
+L’audit s’appuie sur les cadres méthodologiques et les référentiels du NIST, de MITRE et de l’OWASP, sélectionnés selon la nature du logiciel examiné. Ils guident la conduite de l’investigation, la classification des faiblesses et la vérification des contrôles de sécurité applicables.
+
 1. **Cadrage**. Définition du périmètre, des composants sensibles, des hypothèses de menace et des attentes de restitution.
-2. **Cartographie**. Lecture de l’architecture, des frontières de confiance, des dépendances et des flux qui portent les données sensibles.
+2. **Cartographie et planification**. Lecture de l’architecture, des frontières de confiance, des dépendances et des flux qui portent les données sensibles.
 3. **Investigation**. Recherche des faiblesses et des enchaînements qui pourraient être exploités dans le contexte applicatif.
 4. **Qualification**. Mise en perspective de chaque constat selon son impact potentiel, sa plausibilité et sa priorité de traitement.
 5. **Restitution**. Présentation des résultats aux décideurs et aux équipes techniques afin de préparer les remédiations.
+
+L’équipe BlueTrusty construit l’environnement de test avant l’audit, puis le démantèle de façon sécurisée à l’issue de la mission. Elle assure les échanges avec le client, conduit les entretiens nécessaires et présente les résultats. Elle analyse et qualifie les rapports produits avec l’assistance de l’IA : les conclusions reposent ainsi sur une lecture argumentée, supervisée et assumée par l’équipe.
 
 ## Un rapport conçu pour la décision et la correction
 
@@ -48,14 +54,23 @@ Une restitution permet ensuite d’échanger sur les conclusions, de préciser l
 
 L’IA apporte une capacité d’exploration adaptée aux périmètres étendus et accélère l’investigation. Le service ne constitue pas une certification du logiciel ni une garantie d’absence de vulnérabilité. Les résultats sont communiqués dans le cadre précis du périmètre audité et des éléments mis à disposition.
 
-## Références pour approfondir le sujet
+## À propos de bluetrusty.ai
 
-Le cadre méthodologique est aussi présenté dans les ressources suivantes :
+BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtrisées est présentée dans les formations et l’article suivants :
 
 - [Formation ORSYS : Plateforme IA d’entreprise, construire une architecture hybride](https://www.orsys.fr/formation/ahi)
 - [Formation Institut Capgemini : construire sa plateforme IA d’entreprise souveraine et maîtrisée](https://www.institut.capgemini.fr/formation/construire-sa-plateforme-ia-d-entreprise-souveraine-et-maitrisee/)
 - [Article ChannelNews : ITS Group formalise une offre d’accompagnement à la construction de plateformes IA souveraines](https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132)
 
-## Certification
+Les référentiels méthodologiques mentionnés dans cette offre sont accessibles ici :
 
-BlueTrusty est certifié ISO 27001.
+- [NIST SP 800-115 : guide des évaluations techniques de sécurité](https://csrc.nist.gov/pubs/sp/800/115/final)
+- [NIST SP 800-218 : Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final)
+- [MITRE CWE : classification des faiblesses logicielles](https://cwe.mitre.org/)
+- [MITRE CAPEC : catalogue des scénarios d’attaque](https://capec.mitre.org/)
+- [OWASP Code Review Guide : guide de revue de code sécurisé](https://owasp.org/projects/code-review-guide)
+- [OWASP ASVS : référentiel de vérification pour les applications web](https://owasp.org/projects/asvs)
+
+---
+
+Version 1.0 · Contact : [contact@blutrusty.com](mailto:contact@blutrusty.com)
