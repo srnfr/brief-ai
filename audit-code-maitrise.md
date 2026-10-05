@@ -1,6 +1,6 @@
 # Audit de cybersécurité de code logiciel par IA dans un environnement maîtrisé
 
-## Objet de l’offre
+## Contexte
 
 BlueTrusty propose une analyse de sécurité du code logiciel mis à sa disposition par le client. L’objectif est d’identifier les vulnérabilités et les scénarios de risque qui méritent une correction ou une investigation complémentaire, puis de les restituer dans un rapport exploitable.
 
@@ -10,7 +10,7 @@ Elle est particulièrement adaptée aux organisations qui ne souhaitent pas expo
 
 Ces préoccupations rejoignent la [controverse récente autour de travaux mathématiques non publiés et des conditions dans lesquelles OpenAI aurait pu en avoir connaissance](https://www.numerama.com/tech/2328503-openai-affirme-avoir-resolu-une-partie-dun-probleme-de-maths-du-millenaire-malgre-des-accusations-de-plagiat.html). Les faits sont contestés, mais cet épisode rappelle l’importance de maîtriser précisément où circulent le code, les échanges et les résultats de recherche.
 
-## Un audit de code adapté au contexte sensible
+## Un audit de code adapté aux environnements sensibles
 
 Le code source, les dépendances, les configurations et la documentation utile sont étudiés dans une enclave située en Union européenne. Le matériel IA mobilisé est réservé à cette fonction. L’analyse ne repose pas sur un service d’IA cloud mutualisé. En aucun cas, une partie du code ne sera exfiltrée ni transmise à une IA ou à tout autre service extérieur à l’enclave.
 
@@ -75,4 +75,4 @@ BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtris
 
 ---
 
-Version 1.0 · Contact : [contact@bluetrusty.com](mailto:contact@bluetrusty.com)
+Version 1.2 · Contact : [contact@bluetrusty.com](mailto:contact@bluetrusty.com)

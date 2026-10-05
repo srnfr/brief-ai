@@ -4,6 +4,7 @@ import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const source = readFileSync(join(root, 'audit-code-maitrise.md'), 'utf8');
+const logoDataUrl = `data:image/png;base64,${readFileSync(join(root, 'assets/bluetrusty-logo-white.png')).toString('base64')}`;
 
 function escapeHtml(value) {
   return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -55,17 +56,41 @@ const html = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlueTrusty — ${title}</title>
   <style>
-    @page { size: A4; margin: 18mm 18mm 20mm; }
+    @page {
+      size: A4;
+      margin: 33mm 18mm 20mm;
+      @top-center {
+        content: "CYBERSÉCURITÉ AUGMENTÉE PAR IA";
+        width: 174mm;
+        height: 19mm;
+        margin-bottom: 4mm;
+        padding-right: 5mm;
+        color: #c5dfec;
+        font: 7.5pt "DejaVu Sans", sans-serif;
+        letter-spacing: .1em;
+        text-align: right;
+        background-image: url("${logoDataUrl}"), linear-gradient(100deg, #102e60, #07182f);
+        background-repeat: no-repeat;
+        background-position: 5mm center, center;
+        background-size: 39mm auto, cover;
+      }
+      @bottom-center {
+        content: "https://blutrusty.com - v1.2 · " counter(page) " / " counter(pages);
+        width: 174mm;
+        height: 10mm;
+        border-top: 1px solid #b4cbd9;
+        color: #53718a;
+        font: 7pt "DejaVu Sans", sans-serif;
+        text-align: right;
+      }
+    }
     * { box-sizing: border-box; }
     html, body { margin: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; color: #102e4c; font-size: 9.4pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .page-header { height: 19mm; margin-bottom: 8mm; padding: 2.3mm 5mm 1.5mm; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(100deg, #102e60, #07182f); color: #c5dfec; }
-    .page-header img { width: 39mm; height: 14mm; object-fit: contain; object-position: left center; }
-    .page-header span { font-size: 7.5pt; letter-spacing: .1em; text-transform: uppercase; }
+    body { font-family: "DejaVu Serif", Georgia, serif; color: #102e4c; font-size: 8.8pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .watermark { position: fixed; top: 7mm; right: -18mm; width: 158mm; height: 230mm; z-index: -1; pointer-events: none; opacity: .085; }
     main { position: relative; z-index: 1; }
-    h1 { margin: 0 0 7mm; color: #102e60; font-size: 21pt; line-height: 1.18; letter-spacing: -.03em; border-bottom: 2.5mm solid #45c9f4; padding-bottom: 4mm; }
-    h2 { margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 1.2mm solid #45c9f4; color: #102e60; font-size: 13pt; line-height: 1.2; break-after: avoid; }
+    h1 { margin: 0 0 7mm; color: #102e60; font: bold 21pt/1.18 "DejaVu Sans", sans-serif; letter-spacing: -.03em; border-bottom: 2.5mm solid #45c9f4; padding-bottom: 4mm; }
+    h2 { margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 1.2mm solid #45c9f4; color: #102e60; font: bold 13pt/1.2 "DejaVu Sans", sans-serif; break-after: avoid; }
     p { margin: 0 0 2.7mm; text-align: left; orphans: 3; widows: 3; }
     ul, ol { margin: 2mm 0 3.5mm; padding-left: 6mm; }
     li { padding-left: 1mm; margin-bottom: 1.3mm; break-inside: avoid; }
@@ -77,7 +102,6 @@ const html = `<!doctype html>
   </style>
 </head>
 <body>
-  <div class="page-header"><img src="assets/bluetrusty-logo-white.png" alt="BlueTrusty"><span>Offre de cybersécurité · Version 1.0</span></div>
   <svg class="watermark" viewBox="0 0 630 920" aria-hidden="true">
     <defs><path id="arc" d="M 210,-50 C 700,170 210,300 580,560 S 780,880 340,1010" fill="none" stroke="#1f75aa" stroke-width="2"/></defs>
     <g fill="none" stroke="#1f75aa" stroke-width="2">
