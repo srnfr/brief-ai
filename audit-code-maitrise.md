@@ -8,7 +8,7 @@ L’intervention s’adresse notamment aux applications métier, aux API, aux co
 
 Elle est particulièrement adaptée aux organisations qui ne souhaitent pas exposer leur base de code à des services externes, afin de préserver la confidentialité et leur propriété intellectuelle. Elle répond aussi aux cas où l’usage d’outils d’IA en cloud reste inacceptable, y compris lorsque ces outils proposent une configuration ZDR, ou *Zero Data Retention*.
 
-Ces préoccupations rejoignent la [controverse récente autour de travaux mathématiques non publiés et des conditions dans lesquelles OpenAI aurait pu en avoir connaissance](https://www.wired.com/story/openai-navier-stokes-math-discovery-academics/). Les faits sont contestés, mais cet épisode rappelle l’importance de maîtriser précisément où circulent le code, les échanges et les résultats de recherche.
+Ces préoccupations rejoignent la [controverse récente autour de travaux mathématiques non publiés et des conditions dans lesquelles OpenAI aurait pu en avoir connaissance](https://www.numerama.com/tech/2328503-openai-affirme-avoir-resolu-une-partie-dun-probleme-de-maths-du-millenaire-malgre-des-accusations-de-plagiat.html). Les faits sont contestés, mais cet épisode rappelle l’importance de maîtriser précisément où circulent le code, les échanges et les résultats de recherche.
 
 ## Un audit de code adapté au contexte sensible
 
@@ -28,7 +28,9 @@ Plusieurs agents spécialisés travaillent en parallèle sur les zones les plus 
 
 Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l’éditeur du modèle de langage utilisé, ce qui permet de maîtriser séparément l’orchestration de l’analyse et le choix du modèle.
 
-Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (*open weight*), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée. Les éléments anonymisés sont conservés dans un espace de stockage raw dédié, afin d’améliorer progressivement les capacités du moteur d’audit cyber. Les résultats produits par les agents sont rapprochés, contextualisés et structurés pour former une vue cohérente des risques.
+Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (*open weight*), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée.
+
+Tous nos rapports d’audit et travaux de recherche sont anonymisés, puis conservés dans un espace de stockage raw dédié et indexés dans une base de connaissances de type RAG (*Retrieval-Augmented Generation*). Cette base est mise à la disposition du LLM à l’intérieur de l’enclave. Pendant l’investigation, le modèle retrouve les analyses, scénarios de risque et pistes de correction pertinents issus de cette expérience accumulée. Le fine-tuning adapte ses capacités ; le RAG lui apporte des connaissances consultables au moment de l’audit, ce qui renforce la portée du moteur d’audit cyber. Les résultats produits par les agents sont ensuite rapprochés, contextualisés et structurés pour former une vue cohérente des risques.
 
 ## Déroulé de l’audit
 
@@ -50,26 +52,26 @@ Des annexes techniques détaillées accompagnent le rapport. Elles peuvent notam
 
 Une restitution permet ensuite d’échanger sur les conclusions, de préciser les points sensibles et de définir les prochaines étapes.
 
-## Cadre et limites
+## Cadre, limites et référentiels
 
 L’IA apporte une capacité d’exploration adaptée aux périmètres étendus et accélère l’investigation. Le service ne constitue pas une certification du logiciel ni une garantie d’absence de vulnérabilité. Les résultats sont communiqués dans le cadre précis du périmètre audité et des éléments mis à disposition.
 
-## À propos de bluetrusty.ai
+Les référentiels méthodologiques mentionnés dans cette offre sont accessibles ici :
+
+- [NIST SP 800-115: Technical Guide to Information Security Testing and Assessment](https://csrc.nist.gov/pubs/sp/800/115/final)
+- [NIST SP 800-218: Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities](https://csrc.nist.gov/pubs/sp/800/218/final)
+- [MITRE CWE: Common Weakness Enumeration](https://cwe.mitre.org/)
+- [MITRE CAPEC: Common Attack Pattern Enumeration and Classification](https://capec.mitre.org/)
+- [OWASP Code Review Guide](https://owasp.org/projects/code-review-guide)
+- [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/projects/asvs)
+
+## À propos de [bluetrusty.ai](https://bluetrusty.ai/)
 
 BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtrisées est présentée dans les formations et l’article suivants :
 
 - [Formation ORSYS : Plateforme IA d’entreprise, construire une architecture hybride](https://www.orsys.fr/formation/ahi)
 - [Formation Institut Capgemini : construire sa plateforme IA d’entreprise souveraine et maîtrisée](https://www.institut.capgemini.fr/formation/construire-sa-plateforme-ia-d-entreprise-souveraine-et-maitrisee/)
 - [Article ChannelNews : ITS Group formalise une offre d’accompagnement à la construction de plateformes IA souveraines](https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132)
-
-Les référentiels méthodologiques mentionnés dans cette offre sont accessibles ici :
-
-- [NIST SP 800-115 : guide des évaluations techniques de sécurité](https://csrc.nist.gov/pubs/sp/800/115/final)
-- [NIST SP 800-218 : Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final)
-- [MITRE CWE : classification des faiblesses logicielles](https://cwe.mitre.org/)
-- [MITRE CAPEC : catalogue des scénarios d’attaque](https://capec.mitre.org/)
-- [OWASP Code Review Guide : guide de revue de code sécurisé](https://owasp.org/projects/code-review-guide)
-- [OWASP ASVS : référentiel de vérification pour les applications web](https://owasp.org/projects/asvs)
 
 ---
 
