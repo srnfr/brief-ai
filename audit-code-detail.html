@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlueTrusty — Audit de cybersécurité de code logiciel par IA dans un environnement maîtrisé</title>
+  <style>
+    @page { size: A4; margin: 18mm 18mm 20mm; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #102e4c; font-size: 9.4pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page-header { height: 19mm; margin-bottom: 8mm; padding: 2.3mm 5mm 1.5mm; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(100deg, #102e60, #07182f); color: #c5dfec; }
+    .page-header img { width: 39mm; height: 14mm; object-fit: contain; object-position: left center; }
+    .page-header span { font-size: 7.5pt; letter-spacing: .1em; text-transform: uppercase; }
+    .watermark { position: fixed; top: 7mm; right: -18mm; width: 158mm; height: 230mm; z-index: -1; pointer-events: none; opacity: .085; }
+    main { position: relative; z-index: 1; }
+    h1 { margin: 0 0 7mm; color: #102e60; font-size: 21pt; line-height: 1.18; letter-spacing: -.03em; border-bottom: 2.5mm solid #45c9f4; padding-bottom: 4mm; }
+    h2 { margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 1.2mm solid #45c9f4; color: #102e60; font-size: 13pt; line-height: 1.2; break-after: avoid; }
+    p { margin: 0 0 2.7mm; text-align: left; orphans: 3; widows: 3; }
+    ul, ol { margin: 2mm 0 3.5mm; padding-left: 6mm; }
+    li { padding-left: 1mm; margin-bottom: 1.3mm; break-inside: avoid; }
+    li::marker { color: #2685b3; }
+    strong { color: #102e60; }
+    a { color: #126c9d; text-decoration: underline; text-underline-offset: 1px; overflow-wrap: anywhere; }
+    .closing-rule { margin: 7mm 0 3mm; border: 0; border-top: 1px solid #b4cbd9; }
+    h2 + p { break-before: avoid; }
+  </style>
+</head>
+<body>
+  <div class="page-header"><img src="assets/bluetrusty-logo-white.png" alt="BlueTrusty"><span>Offre de cybersécurité · Version 1.0</span></div>
+  <svg class="watermark" viewBox="0 0 630 920" aria-hidden="true">
+    <defs><path id="arc" d="M 210,-50 C 700,170 210,300 580,560 S 780,880 340,1010" fill="none" stroke="#1f75aa" stroke-width="2"/></defs>
+    <g fill="none" stroke="#1f75aa" stroke-width="2">
+      <use href="#arc"/><use href="#arc" transform="translate(11 0)"/><use href="#arc" transform="translate(22 0)"/><use href="#arc" transform="translate(33 0)"/><use href="#arc" transform="translate(44 0)"/><use href="#arc" transform="translate(55 0)"/><use href="#arc" transform="translate(66 0)"/>
+      <circle cx="505" cy="690" r="175"/><circle cx="495" cy="700" r="125"/><circle cx="485" cy="710" r="85"/><circle cx="475" cy="720" r="55"/>
+    </g>
+  </svg>
+  <main><h1>Audit de cybersécurité de code logiciel par IA dans un environnement maîtrisé</h1>
+<h2>Objet de l’offre</h2>
+<p>BlueTrusty propose une analyse de sécurité du code logiciel mis à sa disposition par le client. L’objectif est d’identifier les vulnérabilités et les scénarios de risque qui méritent une correction ou une investigation complémentaire, puis de les restituer dans un rapport exploitable.</p>
+<p>L’intervention s’adresse notamment aux applications métier, aux API, aux composants exposés, aux produits en préparation et aux patrimoines logiciels qui concentrent des enjeux de confidentialité ou de disponibilité.</p>
+<p>Elle est particulièrement adaptée aux organisations qui ne souhaitent pas exposer leur base de code à des services externes, afin de préserver la confidentialité et leur propriété intellectuelle. Elle répond aussi aux cas où l’usage d’outils d’IA en cloud reste inacceptable, y compris lorsque ces outils proposent une configuration ZDR, ou <em>Zero Data Retention</em>.</p>
+<p>Ces préoccupations rejoignent la <a href="https://www.numerama.com/tech/2328503-openai-affirme-avoir-resolu-une-partie-dun-probleme-de-maths-du-millenaire-malgre-des-accusations-de-plagiat.html">controverse récente autour de travaux mathématiques non publiés et des conditions dans lesquelles OpenAI aurait pu en avoir connaissance</a>. Les faits sont contestés, mais cet épisode rappelle l’importance de maîtriser précisément où circulent le code, les échanges et les résultats de recherche.</p>
+<h2>Un audit de code adapté au contexte sensible</h2>
+<p>Le code source, les dépendances, les configurations et la documentation utile sont étudiés dans une enclave située en Union européenne. Le matériel IA mobilisé est réservé à cette fonction. L’analyse ne repose pas sur un service d’IA cloud mutualisé. En aucun cas, une partie du code ne sera exfiltrée ni transmise à une IA ou à tout autre service extérieur à l’enclave.</p>
+<p>Le périmètre de l’audit cyber de code est défini avant le transfert. Les modalités de remise, les règles de manipulation et le canal de restitution sont convenus avec le client afin de s’aligner sur ses contraintes de confidentialité.</p>
+<p>Selon le volume du périmètre, l’enclave s’appuie sur des capacités NVIDIA, notamment des puces Blackwell ou des châssis DGX. Elle peut utiliser du matériel déjà détenu par BlueTrusty et exploité dans un environnement cloisonné et maîtrisé. Elle peut aussi recourir à la location à l’heure de capacités matérielles brutes auprès d’opérateurs d’infrastructure en tant que service (IaaS), soit qualifiés SecNumCloud, soit hébergeant ces capacités dans l’Union européenne. Dans ce cas, les ressources sont réservées à l’audit et intégrées à l’enclave, sans recours à un service d’IA mutualisé. Le choix de l’infrastructure, de l’opérateur et des modalités d’exploitation est présenté au client et validé par lui avant tout audit.</p>
+<p>Les interactions éventuellement nécessaires avec Internet, par exemple pour consulter une documentation technique ou télécharger un outil spécifique, passent par un sas de sécurité et d’inspection dédié. Les destinations autorisées relèvent d’une liste blanche stricte et particulièrement surveillée. Tous les échanges qui traversent ce sas sont journalisés. Ce contrôle des flux sortants vise à prévenir toute transmission non autorisée de code, de données ou de propriété intellectuelle hors de l’enclave.</p>
+<h2>Une plateforme d’IA spécialement entraînée pour l’analyse de code logiciel</h2>
+<p>Les vulnérabilités se révèlent souvent dans les relations entre composants plutôt que dans une instruction isolée. L’analyse examine donc les flux de données, les contrôles d’accès, les secrets, les dépendances et les hypothèses de configuration qui peuvent former un chemin d’attaque plausible.</p>
+<p>Plusieurs agents spécialisés travaillent en parallèle sur les zones les plus pertinentes du périmètre. Cette organisation permet de traiter de grandes bases de code sans limiter l’investigation à quelques fichiers ou à une lecture séquentielle.</p>
+<p>Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l’éditeur du modèle de langage utilisé, ce qui permet de maîtriser séparément l’orchestration de l’analyse et le choix du modèle.</p>
+<p>Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (<em>open weight</em>), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée.</p>
+<p>Tous nos rapports d’audit et travaux de recherche sont anonymisés, puis conservés dans un espace de stockage raw dédié et indexés dans une base de connaissances de type RAG (<em>Retrieval-Augmented Generation</em>). Cette base est mise à la disposition du LLM à l’intérieur de l’enclave. Pendant l’investigation, le modèle retrouve les analyses, scénarios de risque et pistes de correction pertinents issus de cette expérience accumulée. Le fine-tuning adapte ses capacités ; le RAG lui apporte des connaissances consultables au moment de l’audit, ce qui renforce la portée du moteur d’audit cyber. Nos équipes d’experts rapprochent, contextualisent et structurent ensuite les résultats produits par les agents pour former une vue cohérente des risques.</p>
+<h2>Déroulé de l’audit</h2>
+<p>L’audit s’appuie sur les cadres méthodologiques et les référentiels du NIST, de MITRE et de l’OWASP, sélectionnés selon la nature du logiciel examiné. Ils guident la conduite de l’investigation, la classification des faiblesses et la vérification des contrôles de sécurité applicables.</p>
+<ol>
+<li><strong>Cadrage</strong>. Définition du périmètre, des composants sensibles, des hypothèses de menace et des attentes de restitution.</li>
+<li><strong>Cartographie et planification</strong>. Lecture de l’architecture, des frontières de confiance, des dépendances et des flux qui portent les données sensibles.</li>
+<li><strong>Investigation</strong>. Recherche des faiblesses et des enchaînements qui pourraient être exploités dans le contexte applicatif.</li>
+<li><strong>Qualification</strong>. Mise en perspective de chaque constat selon son impact potentiel, sa plausibilité et sa priorité de traitement.</li>
+<li><strong>Restitution</strong>. Présentation des résultats aux décideurs et aux équipes techniques afin de préparer les remédiations.</li>
+</ol>
+<p>L’équipe BlueTrusty construit l’environnement de test avant l’audit, puis le démantèle de façon sécurisée à l’issue de la mission. Elle assure les échanges avec le client, conduit les entretiens nécessaires et présente les résultats. Elle analyse et qualifie les rapports produits avec l’assistance de l’IA : les conclusions reposent ainsi sur une lecture argumentée, supervisée et assumée par l’équipe.</p>
+<h2>Un rapport conçu pour la décision et la correction</h2>
+<p>Le rapport, réalisé avec l’assistance de l’IA dans cet environnement maîtrisé, distingue les constats selon leur niveau de priorité. Pour chacun, il précise le contexte concerné, le scénario de risque, l’impact potentiel, les éléments de preuve utiles et une orientation de remédiation. Une synthèse facilite les arbitrages de pilotage, tandis que les équipes techniques disposent des informations nécessaires pour organiser les corrections.</p>
+<p>Des annexes techniques détaillées accompagnent le rapport. Elles peuvent notamment présenter des propositions de correction de code, afin d’aider les équipes à préparer et à accélérer les remédiations.</p>
+<p>Une restitution permet ensuite d’échanger sur les conclusions, de préciser les points sensibles et de définir les prochaines étapes.</p>
+<h2>Cadre, limites et référentiels</h2>
+<p>L’IA apporte une capacité d’exploration adaptée aux périmètres étendus et accélère l’investigation. Le service ne constitue pas une certification du logiciel ni une garantie d’absence de vulnérabilité. Les résultats sont communiqués dans le cadre précis du périmètre audité et des éléments mis à disposition.</p>
+<p>Les référentiels méthodologiques mentionnés dans cette offre sont accessibles ici :</p>
+<ul>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/115/final">NIST SP 800-115: Technical Guide to Information Security Testing and Assessment</a></li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST SP 800-218: Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities</a></li>
+<li><a href="https://cwe.mitre.org/">MITRE CWE: Common Weakness Enumeration</a></li>
+<li><a href="https://capec.mitre.org/">MITRE CAPEC: Common Attack Pattern Enumeration and Classification</a></li>
+<li><a href="https://owasp.org/projects/code-review-guide">OWASP Code Review Guide</a></li>
+<li><a href="https://owasp.org/projects/asvs">OWASP Application Security Verification Standard (ASVS)</a></li>
+</ul>
+<h2>À propos de <a href="https://bluetrusty.ai/">bluetrusty.ai</a></h2>
+<p>BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtrisées est présentée dans les formations et l’article suivants :</p>
+<ul>
+<li><a href="https://www.orsys.fr/formation/ahi">Formation ORSYS : Plateforme IA d’entreprise, construire une architecture hybride</a></li>
+<li><a href="https://www.institut.capgemini.fr/formation/construire-sa-plateforme-ia-d-entreprise-souveraine-et-maitrisee/">Formation Institut Capgemini : construire sa plateforme IA d’entreprise souveraine et maîtrisée</a></li>
+<li><a href="https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132">Article ChannelNews : ITS Group formalise une offre d’accompagnement à la construction de plateformes IA souveraines</a></li>
+</ul>
+<hr class="closing-rule">
+<p>Version 1.0 · Contact : <a href="mailto:contact@bluetrusty.com">contact@bluetrusty.com</a></p></main>
+</body>
+</html>
