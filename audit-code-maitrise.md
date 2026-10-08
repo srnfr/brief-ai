@@ -14,6 +14,8 @@ Ces préoccupations rejoignent la [controverse récente autour de travaux mathé
 
 Le code source, les dépendances, les configurations et la documentation utile sont étudiés dans une enclave située en Union européenne. Le matériel IA mobilisé est réservé à cette fonction. L’analyse ne repose pas sur un service d’IA cloud mutualisé. En aucun cas, une partie du code ne sera exfiltrée ni transmise à une IA ou à tout autre service extérieur à l’enclave.
 
+Notre environnement d’audit n’est pas une plateforme multi-tenante ni un espace de travail partagé entre plusieurs clients. À un moment donné, chaque enclave est dédiée à l’analyse du code, des dépendances et des configurations d’un seul client, dans un environnement isolé et contrôlé. Les flux entrants sont placés sous le contrôle d’une architecture réseau ZTNA. Les flux sortants sont journalisés au niveau applicatif au moyen d’une interception TLS effectuée localement. Le modèle ne dispose d’aucun chemin de sortie alternatif : toute communication vers l’extérieur doit passer par le proxy d’interception, selon les règles autorisées et journalisées. Cette conception s’inspire des principes NVIDIA relatifs aux environnements d’exécution isolés, à la séparation des workloads et au contrôle des flux sortants.
+
 Le périmètre de l’audit cyber de code est défini avant le transfert. Les modalités de remise, les règles de manipulation et le canal de restitution sont convenus avec le client afin de s’aligner sur ses contraintes de confidentialité.
 
 Selon le volume du périmètre, l’enclave s’appuie sur des capacités NVIDIA, notamment des puces Blackwell ou des châssis DGX. Elle peut utiliser du matériel déjà détenu par BlueTrusty et exploité dans un environnement cloisonné et maîtrisé. Elle peut aussi recourir à la location à l’heure de capacités matérielles brutes auprès d’opérateurs d’infrastructure en tant que service (IaaS), soit qualifiés SecNumCloud, soit hébergeant ces capacités dans l’Union européenne. Dans ce cas, les ressources sont réservées à l’audit et intégrées à l’enclave, sans recours à un service d’IA mutualisé. Le choix de l’infrastructure, de l’opérateur et des modalités d’exploitation est présenté au client et validé par lui avant tout audit.
@@ -64,6 +66,7 @@ Les référentiels méthodologiques mentionnés dans cette offre sont accessible
 - [MITRE CAPEC: Common Attack Pattern Enumeration and Classification](https://capec.mitre.org/)
 - [OWASP Code Review Guide](https://owasp.org/projects/code-review-guide)
 - [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/projects/asvs)
+- [NVIDIA Enterprise Reference Architectures](https://docs.nvidia.com/enterprise-reference-architectures)
 
 ## À propos de [bluetrusty.ai](https://bluetrusty.ai/)
 
