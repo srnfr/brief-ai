@@ -20,6 +20,7 @@
 <p>Les interactions éventuellement nécessaires avec Internet, par exemple pour consulter une documentation technique ou télécharger un outil spécifique, passent par un sas de sécurité et d’inspection dédié. Les destinations autorisées relèvent d’une liste blanche stricte et particulièrement surveillée. Tous les échanges qui traversent ce sas sont journalisés. Ce contrôle des flux sortants vise à prévenir toute transmission non autorisée de code, de données ou de propriété intellectuelle hors de l’enclave.</p>
 <h2>Une plateforme d’IA spécialement entraînée pour l’analyse de code logiciel</h2>
 <p>Les vulnérabilités se révèlent souvent dans les relations entre composants plutôt que dans une instruction isolée. L’analyse examine donc les flux de données, les contrôles d’accès, les secrets, les dépendances et les hypothèses de configuration qui peuvent former un chemin d’attaque plausible.</p>
+<p>Pour l’analyse des applications Java, l’enclave s’appuie sur une chaîne SAST entièrement exécutée localement. SpotBugs et Find Security Bugs assurent une analyse spécialisée du bytecode Java, complétée par Semgrep et un corpus de règles Java, Spring et Jakarta versionné dans l’environnement d’audit. Les résultats sont normalisés, dédupliqués et corrélés avec le graphe du code avant leur qualification par les modèles et leur validation par les auditeurs. Ni le code source, ni le bytecode, ni les résultats d’analyse ne sont transmis à un service cloud.</p>
 <p>Plusieurs agents spécialisés travaillent en parallèle sur les zones les plus pertinentes du périmètre. Cette organisation permet de traiter de grandes bases de code sans limiter l’investigation à quelques fichiers ou à une lecture séquentielle.</p>
 <p>Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l’éditeur du modèle de langage utilisé, ce qui permet de maîtriser séparément l’orchestration de l’analyse et le choix du modèle.</p>
 <p>Le dispositif utilise du matériel IA de dernière génération et un modèle frontière de type MoE à poids ouverts (<em>open weight</em>), fine-tuné à partir de nos audits anonymisés et d’une documentation cybersécurité sélectionnée.</p>
@@ -62,4 +63,4 @@
 <li><a href="https://www.channelnews.fr/its-group-formalise-une-offre-daccompagnement-a-la-construction-de-plateformes-ia-souveraines-159132">Article ChannelNews : ITS Group formalise une offre d’accompagnement à la construction de plateformes IA souveraines</a></li>
 </ul>
 <hr class="closing-rule">
-<p>Version 1.2 · Contact : <a href="mailto:contact@bluetrusty.com">contact@bluetrusty.com</a></p></main></body></html>
+<p>Version 1.3 · Contact : <a href="mailto:contact@bluetrusty.com">contact@bluetrusty.com</a></p></main></body></html>

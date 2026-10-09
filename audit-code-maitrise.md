@@ -26,6 +26,8 @@ Les interactions éventuellement nécessaires avec Internet, par exemple pour co
 
 Les vulnérabilités se révèlent souvent dans les relations entre composants plutôt que dans une instruction isolée. L’analyse examine donc les flux de données, les contrôles d’accès, les secrets, les dépendances et les hypothèses de configuration qui peuvent former un chemin d’attaque plausible.
 
+Pour l’analyse des applications Java, l’enclave s’appuie sur une chaîne SAST entièrement exécutée localement. SpotBugs et Find Security Bugs assurent une analyse spécialisée du bytecode Java, complétée par Semgrep et un corpus de règles Java, Spring et Jakarta versionné dans l’environnement d’audit. Les résultats sont normalisés, dédupliqués et corrélés avec le graphe du code avant leur qualification par les modèles et leur validation par les auditeurs. Ni le code source, ni le bytecode, ni les résultats d’analyse ne sont transmis à un service cloud.
+
 Plusieurs agents spécialisés travaillent en parallèle sur les zones les plus pertinentes du périmètre. Cette organisation permet de traiter de grandes bases de code sans limiter l’investigation à quelques fichiers ou à une lecture séquentielle.
 
 Le harnais qui orchestre l’audit est open source. Il n’est pas fourni par l’éditeur du modèle de langage utilisé, ce qui permet de maîtriser séparément l’orchestration de l’analyse et le choix du modèle.
@@ -78,4 +80,4 @@ BlueTrusty est certifié ISO 27001. Son approche des infrastructures IA maîtris
 
 ---
 
-Version 1.2 · Contact : [contact@bluetrusty.com](mailto:contact@bluetrusty.com)
+Version 1.3 · Contact : [contact@bluetrusty.com](mailto:contact@bluetrusty.com)
