@@ -43,7 +43,6 @@ for (const original of source.split(/\r?\n/)) {
     closeList();
     const level = heading[1].length;
     parts.push(`<h${level}>${inline(heading[2])}</h${level}>`);
-    if (heading[2] === 'Déroulé de l’audit') parts.push(diagramFigure);
     continue;
   }
   const bullet = line.match(/^\-\s+(.+)$/);
@@ -56,7 +55,10 @@ for (const original of source.split(/\r?\n/)) {
   }
   closeList();
   if (line.startsWith('Notre environnement d’audit n’est pas une plateforme multi-tenante')) parts.push(enclaveCallout);
-  else parts.push(`<p>${inline(line)}</p>`);
+  else {
+    parts.push(`<p>${inline(line)}</p>`);
+    if (line.startsWith('Les vulnérabilités se révèlent souvent')) parts.push(diagramFigure);
+  }
 }
 closeList();
 
